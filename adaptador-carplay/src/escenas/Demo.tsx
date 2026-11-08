@@ -1,12 +1,12 @@
 import type { Caption } from "@remotion/captions";
+import { Efecto } from "../components/Efecto";
+import { FRAME_CONECTADO } from "../eventos";
 import { Easing, interpolate, useCurrentFrame } from "remotion";
 import { COLORES, FUENTE, textoFuerte } from "../estilo";
 import { FondoAuto } from "../components/FondoAuto";
 import { IconoMusica } from "../components/Iconos";
 import { Placa, TAMANO_SUBTITULO, TAMANO_TITULAR } from "../components/Placa";
 import { Titular } from "../components/Titular";
-
-export const FRAME_CONECTADO = 40; // pasa de "conectando…" a la interfaz (campanita)
 
 // Pantalla del auto con una interfaz genérica tipo CarPlay (sin logos)
 const Pantalla: React.FC<{ ancho: number; alto: number }> = ({
@@ -263,5 +263,11 @@ export const Demo: React.FC<{
         </div>
       </div>
     )}
+    extra={
+      <>
+        <Efecto nombre="whoosh" desde={0} />
+        <Efecto nombre="campanita" desde={FRAME_CONECTADO} volumen={0.4} />
+      </>
+    }
   />
 );

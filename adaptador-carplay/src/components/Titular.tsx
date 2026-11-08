@@ -83,11 +83,16 @@ export const Titular: React.FC<{
                     extrapolateLeft: "clamp",
                     extrapolateRight: "clamp",
                   }),
-                  scale: interpolate(frame, [desde, desde + 6], [desde <= 0 ? 1 : 1.6, 1], {
-                    extrapolateLeft: "clamp",
-                    extrapolateRight: "clamp",
-                    easing: Easing.out(Easing.back(2.2)),
-                  }),
+                  scale: interpolate(
+                    frame,
+                    [desde, desde + 6],
+                    [desde <= 0 ? 1 : 1.6, 1],
+                    {
+                      extrapolateLeft: "clamp",
+                      extrapolateRight: "clamp",
+                      easing: Easing.out(Easing.back(2.2)),
+                    },
+                  ),
                   rotate: esClave
                     ? `${interpolate(frame, [desde, desde + 8], [-8, -2], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })}deg`
                     : "0deg",

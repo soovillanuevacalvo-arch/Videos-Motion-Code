@@ -1,6 +1,7 @@
 import { slide } from "@remotion/transitions/slide";
 import { linearTiming, TransitionSeries } from "@remotion/transitions";
-import { AbsoluteFill, useVideoConfig } from "remotion";
+import { Audio } from "@remotion/media";
+import { AbsoluteFill, staticFile, useVideoConfig } from "remotion";
 import { z } from "zod";
 import { SafeZones } from "./components/SafeZones";
 import { Demo } from "./escenas/Demo";
@@ -503,6 +504,7 @@ export const Anuncio: React.FC<AnuncioProps> = ({
           />
         </TransitionSeries.Sequence>
       </TransitionSeries>
+      <Audio name="Música" src={staticFile("audio/musica.wav")} volume={0.55} />
       {mostrarZonasSeguras ? <SafeZones /> : null}
     </AbsoluteFill>
   );

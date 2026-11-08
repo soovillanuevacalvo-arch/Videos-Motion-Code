@@ -1,4 +1,6 @@
 import type { Caption } from "@remotion/captions";
+import { Efecto } from "../components/Efecto";
+import { FRAME_TIRON } from "../eventos";
 import { Easing, interpolate, useCurrentFrame } from "remotion";
 import { Celular } from "../components/Celular";
 import { FondoAuto } from "../components/FondoAuto";
@@ -7,7 +9,6 @@ import { Placa, TAMANO_TITULAR } from "../components/Placa";
 import { Titular } from "../components/Titular";
 
 // Frame (local) en que el cable se suelta: la música se corta aquí
-export const FRAME_TIRON = 18;
 
 const Escena: React.FC<{ ancho: number; alto: number }> = ({ ancho, alto }) => {
   const frame = useCurrentFrame();
@@ -135,5 +136,10 @@ export const Problema: React.FC<{
     }
     captions={captions}
     visual={(caja) => <Escena {...caja} />}
+    extra={
+      <>
+        <Efecto nombre="whoosh" desde={0} />
+      </>
+    }
   />
 );

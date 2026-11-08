@@ -1,12 +1,11 @@
 import type { Caption } from "@remotion/captions";
+import { Efecto } from "../components/Efecto";
+import { FRAME_POP, FRAME_CLIC } from "../eventos";
 import { Easing, interpolate, useCurrentFrame } from "remotion";
 import { FondoAuto } from "../components/FondoAuto";
 import { Placa, TAMANO_TITULAR } from "../components/Placa";
 import { Producto } from "../components/Producto";
 import { Titular } from "../components/Titular";
-
-export const FRAME_POP = 4; // aparece el producto
-export const FRAME_CLIC = 52; // se enchufa al USB
 
 const Escena: React.FC<{ ancho: number; alto: number; foto: string }> = ({
   ancho,
@@ -125,5 +124,12 @@ export const Solucion: React.FC<{
     }
     captions={captions}
     visual={(caja) => <Escena {...caja} foto={foto} />}
+    extra={
+      <>
+        <Efecto nombre="whoosh" desde={0} />
+        <Efecto nombre="pop" desde={FRAME_POP} />
+        <Efecto nombre="clic" desde={FRAME_CLIC} />
+      </>
+    }
   />
 );

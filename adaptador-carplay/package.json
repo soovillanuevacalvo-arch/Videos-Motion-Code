@@ -32,7 +32,9 @@
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "audio": "node scripts/generar-audio.mts",
+    "exportar": "bash scripts/exportar.sh"
   },
   "allowScripts": {
     "esbuild": false

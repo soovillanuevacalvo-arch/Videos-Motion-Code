@@ -1,4 +1,5 @@
 import type { Caption } from "@remotion/captions";
+import { Efecto } from "../components/Efecto";
 import { Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { FondoAuto } from "../components/FondoAuto";
 import { Placa, TAMANO_TITULAR } from "../components/Placa";
@@ -87,5 +88,10 @@ export const Oferta: React.FC<{
         <PuenteBucle {...caja} />
       </>
     )}
+    extra={
+      <>
+        <Efecto nombre="whoosh" desde={0} />
+      </>
+    }
   />
 );
