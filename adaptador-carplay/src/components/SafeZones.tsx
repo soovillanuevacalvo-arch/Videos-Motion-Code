@@ -11,9 +11,27 @@ export const SafeZones: React.FC = () => {
   return (
     <AbsoluteFill style={{ pointerEvents: "none" }}>
       <div style={{ ...blocked, top: 0, left: 0, right: 0, height: s.top }} />
-      <div style={{ ...blocked, bottom: 0, left: 0, right: 0, height: s.bottom }} />
-      <div style={{ ...blocked, top: s.top, bottom: s.bottom, left: 0, width: s.left }} />
-      <div style={{ ...blocked, top: s.top, bottom: s.bottom, right: 0, width: s.right }} />
+      <div
+        style={{ ...blocked, bottom: 0, left: 0, right: 0, height: s.bottom }}
+      />
+      <div
+        style={{
+          ...blocked,
+          top: s.top,
+          bottom: s.bottom,
+          left: 0,
+          width: s.left,
+        }}
+      />
+      <div
+        style={{
+          ...blocked,
+          top: s.top,
+          bottom: s.bottom,
+          right: 0,
+          width: s.right,
+        }}
+      />
       <div
         style={{
           position: "absolute",

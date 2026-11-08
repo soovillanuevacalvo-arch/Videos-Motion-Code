@@ -11,9 +11,9 @@ export const guion = [
   },
   {
     id: "problema",
-    voz: "Se suelta en la mitad del camino, se corta la música y encima te gasta la batería.",
-    pantalla: ["SE DESCONECTA.", "TE GASTA LA BATERÍA."],
-    destacado: "BATERÍA",
+    voz: "Se suelta en la mitad del camino y se te corta la música.",
+    pantalla: ["SE SUELTA.", "CHAO MÚSICA."],
+    destacado: "MÚSICA",
   },
   {
     id: "solucion",
@@ -26,7 +26,7 @@ export const guion = [
     voz: "Te subes, se conecta solo y tienes tu CarPlay sin cables, con mapa y música.",
     pantalla: ["CARPLAY SIN CABLES.", "SE CONECTA SOLO."],
     destacado: "SIN CABLES",
-    letraChica: "Para autos con CarPlay con cable",
+    letraChica: "Para autos con CarPlay o Android Auto con cable",
   },
   {
     id: "oferta",
