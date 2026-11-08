@@ -8,7 +8,7 @@ export const RemotionRoot: React.FC = () => {
         id="Anuncio-9x16"
         component={Anuncio}
         schema={anuncioSchema}
-        durationInFrames={300}
+        durationInFrames={30 * 30}
         fps={30}
         width={1080}
         height={1920}
@@ -18,7 +18,7 @@ export const RemotionRoot: React.FC = () => {
         id="Anuncio-4x5"
         component={Anuncio}
         schema={anuncioSchema}
-        durationInFrames={300}
+        durationInFrames={30 * 30}
         fps={30}
         width={1080}
         height={1350}
